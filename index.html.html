@@ -1,0 +1,362 @@
+<html><head><base href="https://2501.at:7000/"><style>
+:root {
+    --primary-color: #8B7355;
+    --secondary-color: #D4C4A8;
+    --text-color: #4A4139;
+    --background-color: #FAF7F2;
+}
+
+body {
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+    background: linear-gradient(to bottom, var(--secondary-color), var(--background-color));
+}
+
+.logo {
+    max-width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: scale(1.05);
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: var(--primary-color);
+}
+
+.section {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 0 2rem;
+}
+
+.craftsmanship-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.craft-item {
+    background: #D4C4A8;
+    border: 1px solid #8B7355;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.craft-item:hover {
+    transform: translateY(-5px);
+}
+
+.craft-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.craft-content {
+    position: relative;
+    z-index: 1;
+}
+
+.collections {
+    background: #8B7355;  
+    padding: 4rem 2rem;
+    margin: 4rem 0;
+    color: #FAF7F2;
+}
+
+.collection-item {
+    background: #D4C4A8;  
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease;
+    text-align: center;
+    color: #4A4139;
+    border: 1px solid #8B7355;
+}
+
+.collection-item h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #4A4139;
+    border-bottom: 2px solid #8B7355;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.shoe-image {
+    width: 100%;
+    height: 400px;
+    margin-bottom: 1rem;
+    background-size: cover;
+    background-position: center;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    border: 3px solid #8B7355;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+.shoe-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(139,115,85,0.3), transparent);
+    z-index: 1;
+}
+
+.shoe-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.1);
+    transition: background 0.3s ease;
+}
+
+.shoe-image:hover::after {
+    background: rgba(0,0,0,0.2);
+}
+
+.classic-shoe {
+    background-image: url('classic soes.jpg');
+}
+
+.modern-shoe {
+    background-image: url('the modern.jpg');
+}
+
+.vintage-shoe {
+    background-image: url('limited edition shes.jpg');
+}
+
+.testimonial {
+    font-style: italic;
+    background: #D4C4A8;  
+    border: 2px solid #8B7355;
+    padding: 2rem;
+    border-radius: 8px;
+    margin: 1rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.15;
+    z-index: 0;
+}
+
+.testimonial-content {
+    position: relative;
+    z-index: 1;
+}
+
+.contact {
+    background: var(--primary-color);
+    color: white;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--secondary-color);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+}
+
+.section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 2.5rem;
+    color: #8B7355;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.section h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 2px;
+    background: #8B7355;
+}
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <img class="logo" src="heritage logo.webp" alt="Heritage Run logo featuring vintage-style shoe illustration with decorative elements" width="300" height="200">
+        <h1 class="tagline animate-fade-in">Where Tradition Meets the Ground</h1>
+    </header>
+
+    <section class="section animate-fade-in">
+        <h2>About Us</h2>
+        <p>Heritage Run stands as a testament to the art of timeless craftsmanship. Every pair of shoes we create embodies our dedication to enduring quality, classic style, and an unwavering commitment to perfection. With roots deep in traditional shoemaking, we blend old-world techniques with modern refinement, ensuring every shoe is crafted to last generations.</p>
+    </section>
+
+    <section class="section">
+        <h2>Our Craftsmanship</h2>
+        <div class="craftsmanship-grid">
+            <div class="craft-item animate-fade-in">
+                <video class="craft-video-bg" autoplay muted loop playsinline>
+                    <source src="Crafting Timeless Elegance_ Shoe Stories-VEED.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="craft-content">
+                    <h3>Handcrafted Quality</h3>
+                    <p>Our shoes are crafted by skilled artisans using time-honored techniques that ensure durability and elegance.</p>
+                </div>
+            </div>
+            <div class="craft-item animate-fade-in">
+                <video class="craft-video-bg" autoplay muted loop playsinline>
+                    <source src="Crafting Timeless Elegance_ Shoe Stories-VEED.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="craft-content">
+                    <h3>Premium Materials</h3>
+                    <p>We source only the finest leather and materials, selected for both beauty and resilience.</p>
+                </div>
+            </div>
+            <div class="craft-item animate-fade-in">
+                <video class="craft-video-bg" autoplay muted loop playsinline>
+                    <source src="Crafting Timeless Elegance_ Shoe Stories-VEED.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+                <div class="craft-content">
+                    <h3>Attention to Detail</h3>
+                    <p>Each shoe is an epitome of perfection, with every stitch, cut, and polish carefully executed to honor its heritage.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="collections">
+        <div class="section">
+            <h2 style="color: #FAF7F2;">Timeless Collections</h2>
+            <div class="craftsmanship-grid">
+                <div class="collection-item">
+                    <div class="shoe-image classic-shoe" role="img" aria-label="Classic two-tone leather oxford shoes in tan and dark blue against dark background"></div>
+                    <h3>Classic Elegance</h3>
+                    <p>Exquisite Oxford dress shoes featuring traditional brogue detailing, hand-burnished premium calfskin leather, and Goodyear welted construction. A timeless masterpiece that exemplifies sophisticated formal wear.</p>
+                </div>
+                <div class="collection-item">
+                    <div class="shoe-image modern-shoe" role="img" aria-label="Elegant brown leather brogue shoes displayed with antique coffee grinder and flowers"></div>
+                    <h3>The Modern Heritage</h3>
+                    <p>Contemporary Derby-style shoes blending traditional craftsmanship with modern comfort technology. Features include premium leather uppers, cushioned insoles, and our signature patina finish.</p>
+                </div>
+                <div class="collection-item">
+                    <div class="shoe-image vintage-shoe" role="img" aria-label="Limited edition Puma shoe in teal and dark green on mossy log"></div>
+                    <h3>Limited Edition Vintage</h3>
+                    <p>Exclusive hand-antiqued leather boots inspired by our 1950s archives. Each pair features distinctive patina work, brass hardware, and numbered edition plates. Only 100 pairs crafted annually.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <h2>Testimonials</h2>
+        <div class="testimonial animate-fade-in">
+            <video class="testimonial-video-bg" autoplay muted loop playsinline>
+                <source src="Heritage in Every Step_ Timeless Shoes-VEED.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="testimonial-content">
+                <p>"These shoes are not just footwear; they are heritage in motion. Every step feels like I'm walking through history."</p>
+            </div>
+        </div>
+        <div class="testimonial animate-fade-in">
+            <video class="testimonial-video-bg" autoplay muted loop playsinline>
+                <source src="Heritage in Every Step_ Timeless Shoes-VEED.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="testimonial-content">
+                <p>"Sophistication at its finest! Heritage Run combines elegance and comfort like no other."</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="contact">
+        <div class="section">
+            <h2>Contact Us</h2>
+            <p>Ready to step into a piece of heritage? Get in touch or visit us to experience true craftsmanship.</p>
+            <p>Email: contact@heritagerun.com</p>
+            <p>Phone: +1-555-0123</p>
+            <p>Address: 123 Classic Ave, Heritage City, Country</p>
+            <div class="social-links">
+                <a href="https://instagram.com/heritagerun">Instagram</a> |
+                <a href="https://facebook.com/heritagerun">Facebook</a> |
+                <a href="https://pinterest.com/heritagerun">Pinterest</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fade-in');
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        document.querySelectorAll('.craft-item, .testimonial, .collection-item').forEach((el) => {
+            observer.observe(el);
+        });
+    </script>
+</body></html>
